@@ -26,30 +26,25 @@ public class Main {
          int y = 12_000_000;
          int born = 17;
          int dead = 8;
-         int totalOneYeer = ((born - dead) * y)/1000;
          int yeer = 0;
          while ( yeer < 10) {
-             y = y +totalOneYeer;
+             y = y +((born - dead) * y)/1000;
              yeer = yeer + 1;
             System.out.println("Год " + yeer + " численность населения составляет " + y);
         }
         System.out.println("Задача 4-5");
-        int investment = 15_000;
-        int totalOne = investment * 7 / 100 ;
-        int q = 1;
-        for  (; investment < 12_000_000; q++) {
-            investment = investment + totalOne;
+        double investment = 15_000;
+        for  (int q = 1; investment < 12_000_000; q++) {
+            investment = investment + investment * 0.07;
             if (q % 6 == 0){
                 System.out.println("Месяц " + q + " сумма накоплений равна " + investment + " рублей");
             }
         }
         System.out.println("Задача 6");
-         int investmentTwo = 15_000;
-         int totalTwo = investmentTwo * 7 / 100 ;
+         double investmentTwo = 15_000;
          int month = 9 * 12;
-         int w = 1;
-         for  (; w <= month; w++) {
-            investmentTwo = investmentTwo + totalTwo;
+         for  (int w = 1; w <= month; w++) {
+            investmentTwo = investmentTwo + investmentTwo * 0.07;
             if (w % 6 == 0){
                 System.out.println("Месяц " + w + " сумма накоплений равна " + investmentTwo + " рублей");
             }
